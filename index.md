@@ -122,8 +122,7 @@ being generated and return by the server:
     <p>
       The current (19:06) temperature
       in <b>Gnarp</b> is
-      19 degrees celsius.
-      <br>
+      19 degrees celsius.<br>
       It is raining! :-(
     </p>
   </body>
@@ -538,6 +537,53 @@ HTTP/1.1 204
 -->
 
 ---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Marcin Wichary (CC BY 2.0)" -->
+## Status code categories
+- Informational (100 – 199)
+- Successful (200 – 299)
+- Redirection (300 – 399)
+- Client error (400 – 499)
+- Server error (500 – 599)
+
+![bg right:30%](images/numbers_pad.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Marcin Wichary (CC BY 2.0)" -->
+## Common status codes
+- **200**: Informational: OK
+- **204**: Informational: No content
+- **301**: Redirection: Moved permanently
+- **400**: Client error: Bad request
+- **401**: Client error: Unauthorized
+- **404**: Client error: Not found
+- **500**: Server error: Internal server error
+- **503**: Server error: Bad gateway
+
+![bg right:30%](images/numbers_pad.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Marcin Wichary (CC BY 2.0)" -->
+...and of course **418**:
+
+> The HTTP 418 ("I'm a teapot")
+> status response code indicates
+> that the server refuses to brew coffee
+> because it is, permanently, a teapot.
+
+— _MDN web docs_
+
+![bg right:30%](images/numbers_pad.jpg)
+
+<!--
+-->
+
+---
 <!-- _footer: "%ATTRIBUTION_PREFIX% Martin Fisch (CC BY 2.0)" -->
 ## Another simple example
 ```
@@ -656,6 +702,46 @@ reverse proxies, but not all
 reverse proxies are load balancers.
 
 ![bg right:30%](images/green_cabling.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Thierry Ehrmann (CC BY 2.0)" -->
+## HTTP version 2
+Introduced back in 2015,
+first major change since 1997.  
+
+Still uses the same verbs, status codes,
+header/body concepts - but no longer a
+simple text based protocol.
+
+Features like multi-plexing, server-side push
+and header compression provides better
+performance/lower latency.
+
+Huge resource savings for
+large web-site operators.
+
+![bg right:30%](images/wireframe.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% David Revoy (CC BY 3.0)" -->
+## HTTP version 3
+Standardized in 2022,
+support still being implemented
+in client/server/proxy software.
+
+Abandons TCP in favor of the
+UDP-based transport protocol "QUIC".
+
+Mandatory TLS-like encryption and
+further performance improvements.
+
+![bg right:30%](images/cyberpunk.jpg)
 
 <!--
 -->
