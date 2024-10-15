@@ -327,7 +327,7 @@ Base path.
 
 Similar to a file system path.
 
-Must not include a file extension,
+Doesn't require file extension,
 like ".html" or ".jpeg", other methods
 exist for communicating response format.
 
