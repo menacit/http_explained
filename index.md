@@ -1,5 +1,5 @@
 ---
-SPDX-FileCopyrightText: © 2024 Menacit AB <foss@menacit.se>
+SPDX-FileCopyrightText: © 2026 Menacit AB <foss@menacit.se>
 SPDX-License-Identifier: CC-BY-SA-4.0
 
 title: "HTTP explained"
@@ -654,7 +654,7 @@ Let's jump into Menacit's
 -->
 
 ---
-<!-- _footer: "%ATTRIBUTION_PREFIX% Rod Waddington (CC BY-SA 2.0)" -->
+<!-- _footer: "%ATTRIBUTION_PREFIX% Stig Nygaard (CC BY 2.0)" -->
 ## HTTP proxies
 An HTTP proxy is a piece of
 software acting as both a
@@ -665,24 +665,50 @@ Can be used to filter,
 redirect and manipulate
 HTTP requests from clients.  
 
-![bg right:30%](images/green_cabling.jpg)
+![bg right:30%](images/holmen_crane.jpg)
 
 <!--
 -->
 
 ---
-<!-- _footer: "%ATTRIBUTION_PREFIX% Rod Waddington (CC BY-SA 2.0)" -->
+<!-- _footer: "%ATTRIBUTION_PREFIX% Brendan J (CC BY 2.0)" -->
 ## Forward proxies
 Commonly used to restrict
 egress communication on a network
 or provide some client anonymity.
 
-## Reverse proxies
-Commonly used to restrict or
-redirect client requests (ingress)
-to one or more servers.
+> A HTTP request reaches the forward proxy.
+> If the host header contains "example.com",
+> the proxy sends a HTTP request to
+> "example.com" and returns its
+> response to the client.
 
-![bg right:30%](images/green_cabling.jpg)
+_(may log requests, return status code 403
+for disallowed host names and similar)_
+
+![bg right:30%](images/gate.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Austin Design (CC BY-SA 2.0)" -->
+## Reverse proxies
+Commonly used to restrict or redirect client
+requests (ingress) to another HTTP server.
+
+> A HTTP request reaches the reverse proxy.
+>
+> If the URL path begins with "/contact",
+> the reverse proxy sends a HTTP request
+> to "w1.int.example.com" and returns
+> its response to the client.
+>
+> Otherwise, the reverse proxy sends a
+> HTTP request to "w2.int.example.com"
+> and returns its response to the client.
+
+![bg right:30%](images/noise_tower.jpg)
 
 <!--
 -->
@@ -702,6 +728,30 @@ reverse proxies, but not all
 reverse proxies are load balancers.
 
 ![bg right:30%](images/green_cabling.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Rod Waddington (CC BY-SA 2.0)" -->
+> A HTTP request reaches the load balancer.
+> 
+> If the host header contains "example.com",
+> the load balancer sends a HTTP request to
+> either "w1.example.com" or "w2.example.com"
+> (depending on their load/availability)
+> and returns its response to the client.
+
+![bg right:30%](images/green_cabling.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Adam Lusch (CC BY-SA 2.0)" -->
+What happened after HTTP version 1.1?
+
+![bg right:30%](images/demolition_pigeon.jpg)
 
 <!--
 -->
@@ -742,6 +792,18 @@ Mandatory TLS-like encryption and
 further performance improvements.
 
 ![bg right:30%](images/cyberpunk.jpg)
+
+<!--
+-->
+
+---
+<!-- _footer: "%ATTRIBUTION_PREFIX% Nirvana Studios (CC BY 4.0)" -->
+We haven't yet talked about cookies,
+WebSockets and other exciting things!
+
+...but that's a story for another day.
+
+![bg right:30%](images/installation_the_singularity.jpg)
 
 <!--
 -->
